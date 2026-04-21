@@ -1,0 +1,1120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LPDWCA 2025/2026 — Suivi de Formation</title>
+    <meta name="description" content="Tableau de bord de suivi de la formation Licence Professionnelle DWCA - Université de Strasbourg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #f8fafc;
+            --card: #ffffff;
+            --border: #e2e8f0;
+            --text: #1e293b;
+            --text-secondary: #64748b;
+            --accent: #3b82f6;
+            --accent-light: #eff6ff;
+            --success: #10b981;
+            --success-bg: #ecfdf5;
+            --success-border: #a7f3d0;
+            --warning: #f59e0b;
+            --warning-bg: #fffbeb;
+            --warning-border: #fde68a;
+            --danger: #ef4444;
+            --danger-bg: #fef2f2;
+            --danger-border: #fecaca;
+            --info: #6366f1;
+            --info-bg: #eef2ff;
+            --info-border: #c7d2fe;
+            --progress: #8b5cf6;
+            --progress-bg: #f5f3ff;
+            --progress-border: #ddd6fe;
+            --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+            --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.05);
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);
+            color: white;
+            padding: 48px 0 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 24px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-text h1 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-text p {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        .last-update {
+            font-size: 0.8rem;
+            opacity: 0.7;
+            background: rgba(255,255,255,0.1);
+            padding: 6px 14px;
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-top: 28px;
+        }
+
+        .stat-card {
+            background: rgba(255,255,255,0.12);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            padding: 16px 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-card .stat-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+
+        .stat-card .stat-label {
+            font-size: 0.78rem;
+            opacity: 0.8;
+            margin-top: 2px;
+        }
+
+        /* Filter Tabs */
+        .filter-section {
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 100;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .filter-tabs {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .filter-tab {
+            padding: 8px 18px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--card);
+            cursor: pointer;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .filter-tab:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        .filter-tab.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        .filter-tab .count {
+            background: rgba(0,0,0,0.1);
+            padding: 1px 8px;
+            border-radius: 10px;
+            font-size: 0.75rem;
+        }
+
+        .filter-tab.active .count {
+            background: rgba(255,255,255,0.25);
+        }
+
+        /* Main Content */
+        main {
+            padding: 24px 0 60px;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 32px 0 16px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border);
+        }
+
+        .section-header:first-child {
+            margin-top: 0;
+        }
+
+        .section-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        .section-header h2 {
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+
+        .section-header .semester-badge {
+            font-size: 0.75rem;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-left: auto;
+        }
+
+        /* UE Cards */
+        .ue-card {
+            background: var(--card);
+            border-radius: var(--radius);
+            border: 1px solid var(--border);
+            margin-bottom: 12px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .ue-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .ue-header {
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .ue-status-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .ue-status-dot.done { background: var(--success); }
+        .ue-status-dot.pending { background: var(--danger); }
+        .ue-status-dot.progress { background: var(--warning); }
+        .ue-status-dot.waiting { background: var(--text-secondary); }
+
+        .ue-title {
+            flex: 1;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .ue-title .ue-code {
+            color: var(--accent);
+            font-weight: 700;
+            margin-right: 6px;
+        }
+
+        .ue-badge {
+            font-size: 0.72rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
+        }
+
+        .badge-done {
+            background: var(--success-bg);
+            color: var(--success);
+            border: 1px solid var(--success-border);
+        }
+
+        .badge-pending {
+            background: var(--danger-bg);
+            color: var(--danger);
+            border: 1px solid var(--danger-border);
+        }
+
+        .badge-progress {
+            background: var(--warning-bg);
+            color: var(--warning);
+            border: 1px solid var(--warning-border);
+        }
+
+        .badge-waiting {
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .ue-chevron {
+            color: var(--text-secondary);
+            transition: transform 0.2s;
+            font-size: 1.2rem;
+        }
+
+        .ue-card.open .ue-chevron {
+            transform: rotate(180deg);
+        }
+
+        .ue-details {
+            display: none;
+            padding: 0 20px 16px;
+            border-top: 1px solid var(--border);
+        }
+
+        .ue-card.open .ue-details {
+            display: block;
+        }
+
+        .ue-description {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            padding: 12px 0;
+            line-height: 1.7;
+        }
+
+        /* Activity Items */
+        .activity-list {
+            margin-top: 8px;
+        }
+
+        .activity-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 10px 0;
+            border-bottom: 1px solid #f1f5f9;
+            font-size: 0.85rem;
+        }
+
+        .activity-item:last-child {
+            border-bottom: none;
+        }
+
+        .activity-check {
+            margin-top: 2px;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .activity-text {
+            flex: 1;
+        }
+
+        .activity-text .activity-name {
+            font-weight: 500;
+            color: var(--text);
+        }
+
+        .activity-text .activity-meta {
+            color: var(--text-secondary);
+            font-size: 0.78rem;
+            margin-top: 2px;
+        }
+
+        .activity-score {
+            font-weight: 600;
+            font-size: 0.8rem;
+            padding: 2px 8px;
+            border-radius: 4px;
+            white-space: nowrap;
+        }
+
+        .score-perfect {
+            background: var(--success-bg);
+            color: var(--success);
+        }
+
+        .score-good {
+            background: var(--info-bg);
+            color: var(--info);
+        }
+
+        /* Action Required Banner */
+        .action-banner {
+            background: var(--danger-bg);
+            border: 1px solid var(--danger-border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin-top: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.85rem;
+        }
+
+        .action-banner.warning-banner {
+            background: var(--warning-bg);
+            border-color: var(--warning-border);
+        }
+
+        .action-banner-icon {
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .action-banner-text {
+            flex: 1;
+        }
+
+        .action-banner-text strong {
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        /* Progress Bar */
+        .progress-bar-container {
+            margin-top: 8px;
+        }
+
+        .progress-bar-label {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.78rem;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: #e2e8f0;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+
+        .progress-bar-fill.green { background: var(--success); }
+        .progress-bar-fill.blue { background: var(--accent); }
+
+        /* Footer */
+        footer {
+            background: var(--card);
+            border-top: 1px solid var(--border);
+            padding: 24px 0;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .stats-bar { grid-template-columns: repeat(2, 1fr); }
+            .header-top { flex-direction: column; align-items: flex-start; gap: 12px; }
+            .filter-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 8px; }
+            .filter-tab { white-space: nowrap; }
+            .ue-header { padding: 12px 16px; }
+            .ue-details { padding: 0 16px 12px; }
+        }
+
+        @media (max-width: 480px) {
+            .stats-bar { grid-template-columns: 1fr 1fr; gap: 8px; }
+            .stat-card { padding: 12px 14px; }
+            .stat-card .stat-value { font-size: 1.4rem; }
+            header { padding: 32px 0 28px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-content">
+        <div class="header-top">
+            <div class="logo-area">
+                <div class="logo-icon">&#127891;</div>
+                <div class="logo-text">
+                    <h1>LP DWCA 2025/2026</h1>
+                    <p>Licence Pro. Design Web, Conception de Contenus et Applications</p>
+                </div>
+            </div>
+            <div class="last-update">Mis &agrave; jour le 21/04/2026</div>
+        </div>
+
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-value">13</div>
+                <div class="stat-label">Unit&eacute;s d'enseignement</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">10</div>
+                <div class="stat-label">Termin&eacute;es</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">3</div>
+                <div class="stat-label">Travaux &agrave; rendre</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-value">92%</div>
+                <div class="stat-label">Progression globale</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="filter-section">
+    <div class="container">
+        <div class="filter-tabs">
+            <button class="filter-tab active" data-filter="all">Tout <span class="count">13</span></button>
+            <button class="filter-tab" data-filter="done">Termin&eacute; <span class="count">10</span></button>
+            <button class="filter-tab" data-filter="pending">A rendre <span class="count">3</span></button>
+            <button class="filter-tab" data-filter="s1">Semestre 5</button>
+            <button class="filter-tab" data-filter="s2">Semestre 6</button>
+            <button class="filter-tab" data-filter="eval">Evaluations</button>
+        </div>
+    </div>
+</div>
+
+<main>
+    <div class="container">
+
+        <!-- SEMESTRE 5 -->
+        <div class="section-header">
+            <div class="section-icon" style="background: var(--accent-light); color: var(--accent);">5</div>
+            <h2>Semestre 5</h2>
+            <span class="semester-badge" style="background: var(--success-bg); color: var(--success);">5/5 termin&eacute;es</span>
+        </div>
+
+        <!-- UE 5.1 -->
+        <div class="ue-card" data-status="done" data-semester="s1">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 5.1</span> Conception et r&eacute;alisations graphiques</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Conception graphique, &eacute;dition et traitement d'images, processus de cr&eacute;ation graphique, ergonomie et UX design, design responsive, droit du multim&eacute;dia.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">&Eacute;valuation 1 &mdash; Cr&eacute;ation graphique</div>
+                            <div class="activity-meta">Valid&eacute; le 06/11/2025 &middot; Fichier d&eacute;pos&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">&Eacute;valuation 2 &mdash; Maquette et int&eacute;gration</div>
+                            <div class="activity-meta">Valid&eacute; le 06/11/2025 &middot; Fichier d&eacute;pos&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">&Eacute;valuation 3 &mdash; Responsive Design</div>
+                            <div class="activity-meta">Valid&eacute; le 06/11/2025 &middot; Fichier d&eacute;pos&eacute;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 5.2 -->
+        <div class="ue-card" data-status="done" data-semester="s1">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 5.2</span> D&eacute;veloppement Front-End</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Langages HTML/CSS, JavaScript, API, int&eacute;gration web, r&eacute;f&eacute;rencement et optimisation SEO. Aucune activit&eacute; de d&eacute;p&ocirc;t requise pour cette UE &mdash; tous les contenus p&eacute;dagogiques ont &eacute;t&eacute; consult&eacute;s.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 5.3 -->
+        <div class="ue-card" data-status="done" data-semester="s1">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 5.3</span> Gestion de projet multim&eacute;dia et commercialisation</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">&Eacute;laboration d'un cahier des charges, conception et gestion de projet, marketing digital, communication publicitaire, r&eacute;seaux sociaux et community management.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Quizz n&deg;1 &mdash; Les march&eacute;s publics</div>
+                            <div class="activity-meta">Valid&eacute; &middot; R&eacute;sultat : 100%</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Plan personnalis&eacute; Solibio (Facultatif)</div>
+                            <div class="activity-meta">Valid&eacute; &middot; Texte renseign&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Sommaire pr&eacute;visionnel Solibio (Facultatif)</div>
+                            <div class="activity-meta">Valid&eacute; &middot; Fichier d&eacute;pos&eacute;</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 5.4 -->
+        <div class="ue-card" data-status="done" data-semester="s1">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 5.4</span> Langues (Anglais)</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Expression &eacute;crite et orale en anglais, anglais sp&eacute;cifique &agrave; la culture des entreprises, temps verbaux, verbes irr&eacute;guliers.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">D&eacute;p&ocirc;t du travail &eacute;crit</div>
+                            <div class="activity-meta">Valid&eacute; &middot; Texte renseign&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Self-assessment, Schedule, Ressources en ligne</div>
+                            <div class="activity-meta">Tous valid&eacute;s</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 5.5 -->
+        <div class="ue-card" data-status="done" data-semester="s1">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 5.5</span> Projet Tuteur&eacute; &mdash; &Eacute;tape 1 : Analyse</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Premi&egrave;re &eacute;tape du projet tuteur&eacute; : phase d'analyse des besoins et de cadrage du projet. Aucune activit&eacute; de d&eacute;p&ocirc;t en ligne requise pour cette UE.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEMESTRE 6 -->
+        <div class="section-header">
+            <div class="section-icon" style="background: var(--info-bg); color: var(--info);">6</div>
+            <h2>Semestre 6</h2>
+            <span class="semester-badge" style="background: var(--warning-bg); color: var(--warning);">3/6 &agrave; compl&eacute;ter</span>
+        </div>
+
+        <!-- UE 6.1 -->
+        <div class="ue-card" data-status="done" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.1</span> D&eacute;veloppement Back-End (PHP)</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Introduction &agrave; PHP, structures de contr&ocirc;le, fonctions, formulaires, bases de donn&eacute;es MySQL, architecture MVC. Situation probl&egrave;me : To Do List PHP.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">D&eacute;p&ocirc;t SP PHP To Do List &Eacute;tape 1</div>
+                            <div class="activity-meta">Valid&eacute; le 02/04/2026 &middot; Texte renseign&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Tous les chapitres et exercices</div>
+                            <div class="activity-meta">Valid&eacute; le 02/04/2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 6.2 ⚠️ -->
+        <div class="ue-card" data-status="pending" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot pending"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.2</span> Design et applications 3D immersives</span>
+                <span class="ue-badge badge-pending">A rendre</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Design graphique 3D avec Blender, bases de Unity 3D, cr&eacute;ation de sc&egrave;nes 3D, applications interactives et immersives en r&eacute;alit&eacute; virtuelle (VR).</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Activit&eacute; 1 : Installer l'environnement 3D</div>
+                            <div class="activity-meta">Valid&eacute; le 02/04/2026</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Chapitre 2 : Les bases de Unity 3D</div>
+                            <div class="activity-meta">Toutes les ressources consult&eacute;es</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#10060;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">S&eacute;ance 6 : D&eacute;p&ocirc;t devoir Blender</div>
+                            <div class="activity-meta">Aucune ressource d&eacute;pos&eacute;e</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#10060;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Activit&eacute; 2 : Cr&eacute;er votre premi&egrave;re sc&egrave;ne Unity 3D</div>
+                            <div class="activity-meta">Aucune ressource d&eacute;pos&eacute;e &middot; Date limite : 28/08/2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-banner">
+                    <span class="action-banner-icon">&#9888;&#65039;</span>
+                    <div class="action-banner-text">
+                        <strong>2 travaux &agrave; rendre</strong>
+                        D&eacute;poser le devoir Blender (s&eacute;ance 6) et exporter une sc&egrave;ne Unity 3D dans l'espace pr&eacute;vu. Vous pouvez utiliser les primitives, materials, textures t&eacute;l&eacute;charg&eacute;es et assets standards.
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>50%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill blue" style="width:50%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 6.3 -->
+        <div class="ue-card" data-status="done" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.3</span> D&eacute;veloppement web : approfondissement (ReactJS)</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Framework JS ReactJS et Node.js, Progressive Web Applications, architecture MVC, ES6, JSX, States et Hooks, Vite.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">D&eacute;p&ocirc;t du diagramme phase 1</div>
+                            <div class="activity-meta">Valid&eacute; le 06/04/2026 &middot; Texte renseign&eacute;</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">D&eacute;p&ocirc;t du diagramme phase 2</div>
+                            <div class="activity-meta">Valid&eacute; le 18/04/2026 &middot; Fichier d&eacute;pos&eacute; (Diagramme_Interdependances_IMC_Phase2.pptx)</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">Chapitres 1&ndash;5 et Situation Probl&egrave;me ReactJS</div>
+                            <div class="activity-meta">Tous valid&eacute;s le 28/03/2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>100%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:100%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 6.4 ⚠️ -->
+        <div class="ue-card" data-status="pending" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot pending"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.4</span> Interactivit&eacute; num&eacute;rique et apprentissage</span>
+                <span class="ue-badge badge-pending">A rendre</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">TICE et apprentissage, ing&eacute;nierie des EIAH (Environnements Informatiques pour l'Apprentissage Humain), mod&eacute;lisation et conception de sc&eacute;narii p&eacute;dagogiques, conception de dispositifs pour la FTLV.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">4.1 TICE et apprentissage &mdash; Toutes les activit&eacute;s</div>
+                            <div class="activity-meta">Valid&eacute; le 21/03/2026 &middot; Analyse de pratiques d&eacute;pos&eacute;e</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">4.2 S'approprier la progression et th&eacute;oriser son projet</div>
+                            <div class="activity-meta">Toutes les ressources consult&eacute;es (diapositives, guides, UML)</div>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#10060;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">4.2 Pr&eacute;sentation et mod&eacute;lisation de votre projet</div>
+                            <div class="activity-meta">Aucune ressource d&eacute;pos&eacute;e &middot; Date limite : 28/08/2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="action-banner">
+                    <span class="action-banner-icon">&#9888;&#65039;</span>
+                    <div class="action-banner-text">
+                        <strong>1 travail &agrave; rendre</strong>
+                        Analyse de l'activit&eacute; d'un dispositif de formation &agrave; distance en suivant le mod&egrave;le d'Engestr&ouml;m. Consulter l'&eacute;nonc&eacute; du travail disponible sur la plateforme.
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>75%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill blue" style="width:75%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 6.5 -->
+        <div class="ue-card" data-status="done" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot waiting"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.5</span> Projet Tuteur&eacute; &mdash; &Eacute;tape 2 : Conception</span>
+                <span class="ue-badge badge-waiting">En attente</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Deuxi&egrave;me &eacute;tape du projet tuteur&eacute; : phase de conception. Aucune activit&eacute; n'a encore &eacute;t&eacute; publi&eacute;e par l'enseignant sur la plateforme.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>En attente</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:0%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- UE 6.6 -->
+        <div class="ue-card" data-status="done" data-semester="s2">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot waiting"></span>
+                <span class="ue-title"><span class="ue-code">UE 6.6</span> Stage</span>
+                <span class="ue-badge badge-waiting">En cours</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Stage en entreprise. La convention de stage se fait via l'espace num&eacute;rique de travail ERENEST de l'Universit&eacute; de Strasbourg. Aucun d&eacute;p&ocirc;t de fichier requis sur DigitalUni.</p>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>En cours</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill blue" style="width:50%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EVALUATIONS FORMATIVES -->
+        <div class="section-header">
+            <div class="section-icon" style="background: var(--progress-bg); color: var(--progress);">&#9733;</div>
+            <h2>&Eacute;valuations Formatives (Quiz)</h2>
+            <span class="semester-badge" style="background: var(--success-bg); color: var(--success);">Excellent</span>
+        </div>
+
+        <div class="ue-card" data-status="done" data-semester="eval">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">Eval</span> &Eacute;valuations Formatives &mdash; Semestre 1</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Ensemble des quiz d'&eacute;valuation formative du semestre 1 couvrant toutes les UE. La grande majorit&eacute; des quiz ont &eacute;t&eacute; r&eacute;alis&eacute;s avec un score de 100%.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.1.1 Cr&eacute;ation graphique Quiz N1 &amp; N2</div>
+                            <div class="activity-meta">Valid&eacute;</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.2.1 HTML/CSS Quiz Pr&eacute;-rentr&eacute;e, N1 &amp; N2</div>
+                            <div class="activity-meta">Valid&eacute;</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.2.2 JavaScript Quiz N1 &amp; N2</div>
+                            <div class="activity-meta">Valid&eacute;</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.1.5 Design Quiz N1 &amp; N2, UE 5.1.6 Droit N1 &amp; N2</div>
+                            <div class="activity-meta">Valid&eacute;</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.3.1 Cahier des charges N1 &amp; N2, UE 5.3.3 Marketing N1</div>
+                            <div class="activity-meta">Valid&eacute;</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">+ 10 autres quiz (UX, SEO, Gestion de projet, etc.)</div>
+                            <div class="activity-meta">Tous valid&eacute;s avec 100%</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                </div>
+                <div class="action-banner warning-banner">
+                    <span class="action-banner-icon">&#8505;&#65039;</span>
+                    <div class="action-banner-text">
+                        <strong>3 quiz non valid&eacute;s (activit&eacute;s ferm&eacute;es)</strong>
+                        UE 5.1.3 Ergonomie/UX Quiz N1, UE 5.3.2 Gestion de projet Quiz N1, UE 5.3.4 Communication publicitaire Quiz N1 &mdash; ces activit&eacute;s &eacute;taient ferm&eacute;es au 28/11/2025.
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>90%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:90%"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="ue-card" data-status="done" data-semester="eval">
+            <div class="ue-header" onclick="toggleCard(this)">
+                <span class="ue-status-dot done"></span>
+                <span class="ue-title"><span class="ue-code">Eval</span> &Eacute;valuations Formatives &mdash; Semestre 2</span>
+                <span class="ue-badge badge-done">Termin&eacute;</span>
+                <span class="ue-chevron">&#9660;</span>
+            </div>
+            <div class="ue-details">
+                <p class="ue-description">Quiz d'&eacute;valuation formative du semestre 2 couvrant les UE d'anglais.</p>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.4.1 Anglais Expression &eacute;crite et orale Quiz N2</div>
+                            <div class="activity-meta">Valid&eacute; le 07/02/2026</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#9989;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.4.2 Anglais culture des entreprises Quiz N1</div>
+                            <div class="activity-meta">Valid&eacute; le 07/02/2026</div>
+                        </div>
+                        <span class="activity-score score-perfect">100%</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-check">&#10060;</span>
+                        <div class="activity-text">
+                            <div class="activity-name">UE 5.4.2 Anglais culture des entreprises Quiz N2</div>
+                            <div class="activity-meta">Non valid&eacute; &middot; Activit&eacute; ferm&eacute;e le 27/02/2026</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-label"><span>Progression</span><span>67%</span></div>
+                    <div class="progress-bar"><div class="progress-bar-fill green" style="width:67%"></div></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <p>LP DWCA 2025/2026 &mdash; Universit&eacute; de Strasbourg &mdash; Service Formation Continue</p>
+        <p style="margin-top:4px;">Plateforme : <a href="https://digitaluni.sfc.unistra.fr/" target="_blank">DigitalUni</a> &middot; Derni&egrave;re v&eacute;rification : 21 avril 2026</p>
+    </div>
+</footer>
+
+<script>
+function toggleCard(header) {
+    const card = header.parentElement;
+    card.classList.toggle('open');
+}
+
+// Filter functionality
+document.querySelectorAll('.filter-tab').forEach(tab => {
+    tab.addEventListener('click', () => {
+        document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+
+        const filter = tab.dataset.filter;
+        const cards = document.querySelectorAll('.ue-card');
+        const sections = document.querySelectorAll('.section-header');
+
+        if (filter === 'all') {
+            cards.forEach(c => c.style.display = '');
+            sections.forEach(s => s.style.display = '');
+            return;
+        }
+
+        if (filter === 'done') {
+            cards.forEach(c => {
+                c.style.display = c.dataset.status === 'done' ? '' : 'none';
+            });
+            sections.forEach(s => s.style.display = '');
+        } else if (filter === 'pending') {
+            cards.forEach(c => {
+                c.style.display = c.dataset.status === 'pending' ? '' : 'none';
+            });
+            sections.forEach(s => s.style.display = 'none');
+        } else if (filter === 's1') {
+            cards.forEach(c => {
+                c.style.display = c.dataset.semester === 's1' ? '' : 'none';
+            });
+            sections.forEach(s => s.style.display = '');
+        } else if (filter === 's2') {
+            cards.forEach(c => {
+                c.style.display = c.dataset.semester === 's2' ? '' : 'none';
+            });
+            sections.forEach(s => s.style.display = '');
+        } else if (filter === 'eval') {
+            cards.forEach(c => {
+                c.style.display = c.dataset.semester === 'eval' ? '' : 'none';
+            });
+            sections.forEach(s => s.style.display = '');
+        }
+    });
+});
+
+// Auto-open pending cards
+document.querySelectorAll('.ue-card[data-status="pending"]').forEach(card => {
+    card.classList.add('open');
+});
+</script>
+
+</body>
+</html>

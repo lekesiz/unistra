@@ -1,0 +1,150 @@
+{
+  "formation": "LP DWCA 2025/2026",
+  "universite": "Université de Strasbourg - Service Formation Continue",
+  "plateforme": "https://digitaluni.sfc.unistra.fr/",
+  "derniere_verification": "2026-04-21",
+  "etudiant": "Mikail L.",
+  "semestres": [
+    {
+      "id": "S5",
+      "nom": "Semestre 5",
+      "ues": [
+        {
+          "code": "UE 5.1",
+          "nom": "Conception et réalisations graphiques",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14077/seqId/7124/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 5.2",
+          "nom": "Développement Front-End",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14078/seqId/7136/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 5.3",
+          "nom": "Gestion de projet multimédia et commercialisation",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14079/seqId/7144/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 5.4",
+          "nom": "Langues (Anglais)",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14080/seqId/7154/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 5.5",
+          "nom": "Projet Tuteuré - Étape 1 : Analyse",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14081/seqId/7157/#/cours",
+          "travaux_a_rendre": []
+        }
+      ]
+    },
+    {
+      "id": "S6",
+      "nom": "Semestre 6",
+      "ues": [
+        {
+          "code": "UE 6.1",
+          "nom": "Développement Back-End (PHP)",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14082/seqId/7159/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 6.2",
+          "nom": "Design et applications 3D immersives",
+          "statut": "a_rendre",
+          "progression": 50,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14083/seqId/7165/#/cours",
+          "travaux_a_rendre": [
+            {
+              "titre": "Séance 6 : Dépôt devoir Blender",
+              "description": "Déposer le fichier du devoir Blender (design graphique 3D)",
+              "date_limite": "2026-08-28",
+              "statut": "non_depose"
+            },
+            {
+              "titre": "Activité 2 : Créer votre première scène Unity 3D",
+              "description": "Créer une scène 3D (plage, forêt, île, salle de classe, terrain de foot, etc.) en utilisant les primitives, materials, textures et assets. Exporter la scène et la déposer.",
+              "date_limite": "2026-08-28",
+              "statut": "non_depose"
+            }
+          ]
+        },
+        {
+          "code": "UE 6.3",
+          "nom": "Développement web : approfondissement (ReactJS)",
+          "statut": "termine",
+          "progression": 100,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14084/seqId/7171/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 6.4",
+          "nom": "Interactivité numérique et apprentissage",
+          "statut": "a_rendre",
+          "progression": 75,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14085/seqId/7177/#/cours",
+          "travaux_a_rendre": [
+            {
+              "titre": "4.2 Présentation et modélisation de votre projet",
+              "description": "Analyse de l'activité d'un dispositif de formation à distance en suivant le modèle d'Engeström",
+              "date_limite": "2026-08-28",
+              "statut": "non_depose"
+            }
+          ]
+        },
+        {
+          "code": "UE 6.5",
+          "nom": "Projet Tuteuré - Étape 2 : Conception",
+          "statut": "en_attente",
+          "progression": 0,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14086/seqId/7185/#/cours",
+          "travaux_a_rendre": []
+        },
+        {
+          "code": "UE 6.6",
+          "nom": "Stage",
+          "statut": "en_cours",
+          "progression": 50,
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14087/seqId/7186/#/cours",
+          "travaux_a_rendre": []
+        }
+      ]
+    }
+  ],
+  "evaluations_formatives": {
+    "semestre_1": {
+      "total_quiz": 24,
+      "valides": 21,
+      "non_valides_fermes": 3,
+      "meilleur_resultat_moyen": "100%",
+      "quiz_non_valides": [
+        "UE 5.1.3 Ergonomie/UX Quiz N1 (fermé 28/11/2025)",
+        "UE 5.3.2 Conception/gestion projet Quiz N1 (fermé 28/11/2025)",
+        "UE 5.3.4 Communication publicitaire Quiz N1 (fermé 28/11/2025)"
+      ]
+    },
+    "semestre_2": {
+      "total_quiz": 3,
+      "valides": 2,
+      "non_valides_fermes": 1,
+      "quiz_non_valides": [
+        "UE 5.4.2 Anglais culture des entreprises Quiz N2 (fermé 27/02/2026)"
+      ]
+    }
+  }
+}
