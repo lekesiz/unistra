@@ -3,7 +3,7 @@
   "universite": "Université de Strasbourg - Service Formation Continue",
   "plateforme": "https://digitaluni.sfc.unistra.fr/",
   "derniere_verification": "2026-05-04",
-  "note_verification": "Vérification automatique du 04/05/2026 : session DigitalUni expirée, impossible de se connecter. Les données ci-dessous reflètent l'état connu au 29/04/2026. Les quiz du 30/04-01/05 n'ont pas pu être vérifiés.",
+  "note_verification": "Vérification complète du 04/05/2026 : connexion réussie, toutes les UE scannées. Séance 6 Blender et diagramme React phase 2 désormais validés.",
   "etudiant": "Mikail L.",
   "semestres": [
     {
@@ -70,14 +70,16 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14083/seqId/7165/#/cours",
+          "note": "Blender Séance 6 dépôt devoir validé le 24/04/2026 (EU6.2.zip)",
           "travaux_a_rendre": []
         },
         {
           "code": "UE 6.3",
-          "nom": "Développement web : approfondissement (ReactJS)",
+          "nom": "Développement web : approfondissement (ReactJS, PWA, MVC)",
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14084/seqId/7171/#/cours",
+          "note": "Dépôt diagramme phase 2 validé le 18/04/2026",
           "travaux_a_rendre": []
         },
         {
@@ -94,6 +96,7 @@
           "statut": "en_attente",
           "progression": 0,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14086/seqId/7185/#/cours",
+          "note": "Aucune activité pour l'instant sur la plateforme",
           "travaux_a_rendre": []
         },
         {
@@ -102,7 +105,14 @@
           "statut": "en_cours",
           "progression": 50,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14087/seqId/7186/#/cours",
-          "travaux_a_rendre": []
+          "note": "Convention de stage non validée (étoile vide)",
+          "travaux_a_rendre": [
+            {
+              "titre": "Convention de stage",
+              "statut": "non_depose",
+              "deadline": "28/08/2026"
+            }
+          ]
         }
       ]
     }
@@ -124,7 +134,7 @@
       "valides": 10,
       "en_attente": 14,
       "non_valides_fermes": 1,
-      "note": "Les quiz du 30/04-01/05 (UE 6.2.1 Design 3D N2 et UE 6.2.2 Développement 3D N1) sont maintenant passés. Statut non vérifié car session DigitalUni expirée le 04/05/2026.",
+      "note": "Vérification du 04/05/2026 : les quiz du 30/04-01/05 (Design 3D N2, Dév 3D N1) ne sont pas encore apparus dans la section Évaluation Formative semestre 2. Prochains quiz : 14-15/05/2026.",
       "quiz_valides": [
         "UE 6.1.1 PHP Quiz N1 - 100% (05/03/2026)",
         "UE 5.2.4 Référencement Quiz N2 - 100% (05/03/2026)",
@@ -138,8 +148,8 @@
         "UE 6.3.3 MVC Quiz N2 - 100% (24/02/2026)"
       ],
       "quiz_a_verifier": [
-        "UE 6.2.1 Design 3D Quiz N2 (30/04-01/05/2026) - DATE PASSÉE, statut inconnu",
-        "UE 6.2.2 Développement 3D Quiz N1 (30/04-01/05/2026) - DATE PASSÉE, statut inconnu"
+        "UE 6.2.1 Design 3D Quiz N2 (30/04-01/05/2026) - Non visible dans Eval Formative",
+        "UE 6.2.2 Développement 3D Quiz N1 (30/04-01/05/2026) - Non visible dans Eval Formative"
       ],
       "quiz_a_venir": [
         "UE 6.3.3 MVC Quiz N1 (14/05-15/05/2026)",
