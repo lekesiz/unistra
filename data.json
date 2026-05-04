@@ -2,7 +2,8 @@
   "formation": "LP DWCA 2025/2026",
   "universite": "Université de Strasbourg - Service Formation Continue",
   "plateforme": "https://digitaluni.sfc.unistra.fr/",
-  "derniere_verification": "2026-04-29",
+  "derniere_verification": "2026-05-04",
+  "note_verification": "Vérification automatique du 04/05/2026 : session DigitalUni expirée, impossible de se connecter. Les données ci-dessous reflètent l'état connu au 29/04/2026. Les quiz du 30/04-01/05 n'ont pas pu être vérifiés.",
   "etudiant": "Mikail L.",
   "semestres": [
     {
@@ -123,6 +124,7 @@
       "valides": 10,
       "en_attente": 14,
       "non_valides_fermes": 1,
+      "note": "Les quiz du 30/04-01/05 (UE 6.2.1 Design 3D N2 et UE 6.2.2 Développement 3D N1) sont maintenant passés. Statut non vérifié car session DigitalUni expirée le 04/05/2026.",
       "quiz_valides": [
         "UE 6.1.1 PHP Quiz N1 - 100% (05/03/2026)",
         "UE 5.2.4 Référencement Quiz N2 - 100% (05/03/2026)",
@@ -135,9 +137,11 @@
         "UE 6.4.1 TICE Quiz N2 - 100% (02/04/2026)",
         "UE 6.3.3 MVC Quiz N2 - 100% (24/02/2026)"
       ],
+      "quiz_a_verifier": [
+        "UE 6.2.1 Design 3D Quiz N2 (30/04-01/05/2026) - DATE PASSÉE, statut inconnu",
+        "UE 6.2.2 Développement 3D Quiz N1 (30/04-01/05/2026) - DATE PASSÉE, statut inconnu"
+      ],
       "quiz_a_venir": [
-        "UE 6.2.1 Design 3D Quiz N2 (30/04-01/05/2026)",
-        "UE 6.2.2 Développement 3D Quiz N1 (30/04-01/05/2026)",
         "UE 6.3.3 MVC Quiz N1 (14/05-15/05/2026)",
         "UE 6.4.2 EIAH Quiz N1 (14/05-15/05/2026)",
         "UE 6.4.3 Scénarii pédagogiques Quiz N1 (14/05-15/05/2026)",
