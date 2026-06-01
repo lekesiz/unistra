@@ -3,7 +3,7 @@
   "universite": "Université de Strasbourg - Service Formation Continue",
   "plateforme": "https://digitaluni.sfc.unistra.fr/",
   "derniere_verification": "2026-06-01",
-  "note_verification": "Tentative de vérification le 01/06/2026 (session expirée, login requis). Dernière vérification LIVE réussie: 22/05/2026 14:17-14:25. État inchangé depuis le 22/05. 12/16 modules validés sur plateforme. Séquences Sécurité/MVC/PWA/EIAH non publiées. Quiz S2 prévus 28-29/05 probablement passés (non vérifiable sans login).",
+  "note_verification": "Vérification LIVE réussie le 01/06/2026 07:15-07:20 (login OK). Toutes les UE progression pédagogique vérifiées. Fiche de suivi Eval Formative complète extraite. S2 quiz désormais publiés et majoritairement validés. 49/58 quiz validés au total (S1: 28/32, S2: 21/26). 5 quiz S2 non validés (11-12/06 et 25-26/06). Durée attestée: 81H / 96H30 contractuelle.",
   "etudiant": "Mikail L.",
   "semestres": [
     {
@@ -16,6 +16,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14077/seqId/7124/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 1.1-1.6 (Création graphique, Processus, Ergonomie/UX, Mobile/Responsive, Design web, Droit). Tout terminé.",
           "travaux_a_rendre": []
         },
         {
@@ -24,6 +25,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14078/seqId/7136/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 2.1 HTML/CSS, 2.2 JS/API, 2.3 Intégration web, 2.4 Référencement. Tout terminé.",
           "travaux_a_rendre": []
         },
         {
@@ -32,6 +34,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14079/seqId/7144/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 3.1-3.5 (Cahier des charges, Gestion projet, Marketing, Communication, Réseaux sociaux). Tout terminé.",
           "travaux_a_rendre": []
         },
         {
@@ -40,6 +43,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14080/seqId/7154/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 4.1 Expression écrite/orale, 4.2 Culture entreprises. Tout terminé.",
           "travaux_a_rendre": []
         },
         {
@@ -48,6 +52,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14081/seqId/7157/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: UE 5.5.1 Projet Tuteuré + CV. Tout terminé.",
           "travaux_a_rendre": []
         }
       ]
@@ -62,7 +67,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14082/seqId/7159/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Séq 1.1 PHP Christoffel TOUT validé 02/04/2026. Séq 1.2 CMS Mauhin TOUT validé 21-27/03/2026 (quiz 100%). 7 CV validées (dernière 15/05/2026). Séq 1.3 Sécurité Madani&Passeri: 'aucune activité' sur plateforme (non encore publiée).",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences non listées (page vide). Quiz S2 confirmés: PHP N1 validé 05/03, PHP N2 validé 20/03, CMS N1 validé 20/03, CMS N2 validé 02/04, Sécurité N1 validé 29/05. Sécurité N2 NON VALIDÉ (25-26/06).",
           "travaux_a_rendre": []
         },
         {
@@ -71,7 +76,7 @@
           "statut": "termine",
           "progression": 100,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14083/seqId/7167/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Séq 2.1 Design 3D Solon TOUT validé 24/04/2026 (8 activités, EU6.2.zip déposé). Séq 2.2 et 2.3 non vérifiées (aucune activité visible).",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 2.1 Design 3D Solon, 2.2 Dév 3D Ngu, 2.3 VR Ngu + CV. Quiz S2: Design 3D N1 validé 02/04, N2 validé 30/04. Dév 3D N1 validé 30/04, Dév 3D N2 NON VALIDÉ (11-12/06).",
           "travaux_a_rendre": []
         },
         {
@@ -79,8 +84,8 @@
           "nom": "Développement web : approfondissement (ReactJS, PWA, MVC)",
           "statut": "termine",
           "progression": 100,
-          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14084/seqId/7173/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Séq 3.1 ReactJS Christoffel TOUT validé 28/03/2026 (diagramme phase 2 déposé 18/04). Séq 3.2 PWA Ngu: 'aucune activité' (non publiée). Séq 3.3 MVC Ngu: 'aucune activité' (non publiée).",
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14084/seqId/7171/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 3.1 ReactJS Christoffel, 3.2 PWA Ngu, 3.3 MVC Ngu + CV. Quiz S2: ReactJS N1 validé 30/04, N2 validé 19/05. MVC N1 validé 19/05, N2 validé 24/02. PWA N1 validé 29/05, PWA N2 NON VALIDÉ (25-26/06).",
           "travaux_a_rendre": []
         },
         {
@@ -88,8 +93,8 @@
           "nom": "Interactivité numérique et apprentissage",
           "statut": "termine",
           "progression": 100,
-          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14085/seqId/7179/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Séq 4.1 TICE TOUT validé 21/03/2026 (3 CV validées). Séq 4.2 EIAH: 'aucune activité' (non publiée). Séq 4.3 Scénarii TOUT validé 24/04/2026 (Analyse_Engestrom déposé). Séq 4.4 FTLV TOUT validé 10/05/2026 (CC Engeström AdaptiveLearnAI déposé).",
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14085/seqId/7177/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquences: 4.1 TICE, 4.2 EIAH, 4.3 Scénarii, 4.4 FTLV (Trestini) + CV. Quiz S2: TICE N1 validé 19/03, N2 validé 02/04. EIAH N1 validé 19/05, N2 validé 29/05. Scénarii N1 validé 19/05, N2 validé 29/05. FTLV N1 NON VALIDÉ (11-12/06), FTLV N2 NON VALIDÉ (25-26/06).",
           "travaux_a_rendre": []
         },
         {
@@ -97,8 +102,8 @@
           "nom": "Projet Tuteuré - Étape 2 : Conception",
           "statut": "en_cours",
           "progression": 67,
-          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14086/seqId/7187/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Plateforme affiche 'aucune activité' (suivi géré par mail/Drive). Suivi N°6 déposé 22/05/2026 12:46. Projet: AI Web Content Analyzer (Flask+Python). Prochains: N°7 (04-05/06), N°8 (18-19/06), N°9 soutenance (02-03/07).",
+          "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14086/seqId/7185/#/cours",
+          "note": "VÉRIFIÉ LIVE 01/06: 'Il n'y a aucune activité pour l'instant'. Séquence: 6.5 Projet Tuteuré Étape 2 Conception. Suivi géré par mail/Drive. Projet: AI Web Content Analyzer. Prochains: N°7 (04-05/06), N°8 (18-19/06), N°9 soutenance (02-03/07).",
           "travaux_a_rendre": [
             {
               "titre": "Suivi N°7",
@@ -123,7 +128,7 @@
           "statut": "en_cours",
           "progression": 50,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14087/seqId/7189/#/cours",
-          "note": "VÉRIFIÉ LIVE 22/05: Convention de stage NON VALIDÉ (étoile vide). Fenêtre 25/09/2025 → 28/08/2026. 3 séquences: Stage FC/FI, Exemples rapports, Exemples vidéo. Convention à finaliser via ERENEST.",
+          "note": "VÉRIFIÉ LIVE 01/06: Convention de stage affichée (Du 25/09/2025 Au 28/08/2026) avec 1 activité. Séquences: Stage FC/FI, Exemples rapports, Exemples vidéo. Convention toujours à finaliser.",
           "travaux_a_rendre": [
             {
               "titre": "Convention de stage (ERENEST)",
@@ -139,27 +144,43 @@
     "semestre_1": {
       "total_quiz": 32,
       "valides": 28,
-      "non_valides_fermes": 3,
-      "non_valides_ouverts": 1,
+      "non_valides_fermes": 4,
+      "non_valides_ouverts": 0,
       "meilleur_resultat_moyen": "100%",
-      "note": "VÉRIFIÉ LIVE 22/05: Séquence Évaluation semestre 1 complète. 28 quiz validés avec 100% meilleur résultat. 3 quiz fermés sans validation (semaine 24-28/11/2025). 1 quiz accessible mais non validé (Anglais entreprises N2).",
+      "note": "VÉRIFIÉ LIVE 01/06 via Fiche de suivi. 28 quiz validés avec 100%. 4 quiz non validés (fermés): UE 5.1.3 Ergonomie/UX N1 (27-28/11/2025), UE 5.3.2 Gestion projet N1 (27-28/11/2025), UE 5.3.4 Communication pub N1 (27-28/11/2025), UE 5.4.2 Anglais entreprises N2 (26-27/02/2026).",
       "quiz_non_valides": [
-        "UE 5.1.3 Ergonomie/UX Quiz N1 (fermé 28/11/2025 - pas de 'Validé')",
-        "UE 5.3.2 Conception/gestion projet Quiz N1 (fermé 28/11/2025 - pas de 'Validé')",
-        "UE 5.3.4 Communication publicitaire Quiz N1 (fermé 28/11/2025 - pas de 'Validé')",
-        "UE 5.4.2 Anglais culture entreprises Quiz N2 (fermé 27/02/2026 - accessible mais pas de 'Validé')"
+        "UE 5.1.3 Ergonomie/UX Quiz N1 (fermé 27-28/11/2025)",
+        "UE 5.3.2 Conception/gestion projet Quiz N1 (fermé 27-28/11/2025)",
+        "UE 5.3.4 Communication publicitaire Quiz N1 (fermé 27-28/11/2025)",
+        "UE 5.4.2 Anglais culture entreprises Quiz N2 (fermé 26-27/02/2026)"
       ]
     },
     "semestre_2": {
-      "total_quiz": 0,
-      "valides": 0,
-      "en_attente": 0,
-      "note": "VÉRIFIÉ LIVE 22/05: Séquence 'Évaluation semestre 2' affiche 'Il n'y a aucune activité pour l'instant'. Les quiz S2 ne sont PAS encore publiés sur la plateforme. Les informations précédentes (quiz S2 validés) provenaient du Master Plan et ne sont pas confirmées par la plateforme.",
-      "quiz_prevus_master_plan": [
-        "28-29/05/2026: EIAH N2, Scénarii péd. N2, Sécurité N1, PWA N1",
-        "11-12/06/2026: Dév 3D N2, FTLV N1, ReactJS N1",
-        "25-26/06/2026: Sécurité N2, PWA N2, FTLV N2",
-        "02-03/07/2026: ReactJS N2"
+      "total_quiz": 26,
+      "valides": 21,
+      "non_valides": 5,
+      "note": "VÉRIFIÉ LIVE 01/06 via Fiche de suivi. Quiz S2 désormais PUBLIÉS et majoritairement validés. 21/26 validés. 5 non validés (activités récentes ou futures). Durée attestée totale: 81H sur 96H30 contractuelle.",
+      "quiz_valides": [
+        "UE 6.1.1 PHP N1 (05/03/2026) et N2 (20/03/2026)",
+        "UE 6.1.2 CMS N1 (20/03/2026) et N2 (02/04/2026)",
+        "UE 6.1.3 Sécurité N1 (29/05/2026)",
+        "UE 6.2.1 Design 3D N1 (02/04/2026) et N2 (30/04/2026)",
+        "UE 6.2.2 Dév 3D N1 (30/04/2026)",
+        "UE 6.3.1 ReactJS N1 (30/04/2026) et N2 (19/05/2026)",
+        "UE 6.3.2 PWA N1 (29/05/2026)",
+        "UE 6.3.3 MVC N1 (19/05/2026) et N2 (24/02/2026)",
+        "UE 6.4.1 TICE N1 (19/03/2026) et N2 (02/04/2026)",
+        "UE 6.4.2 EIAH N1 (19/05/2026) et N2 (29/05/2026)",
+        "UE 6.4.3 Scénarii N1 (19/05/2026) et N2 (29/05/2026)",
+        "UE 5.2.4 Référencement N2 (05/03/2026)",
+        "UE 5.3.5 Réseaux sociaux N2 (05/03/2026)"
+      ],
+      "quiz_non_valides": [
+        "UE 6.2.2 Développement 3D Quiz N2 (11-12/06/2026 - Activité non validée)",
+        "UE 6.4.4 FTLV (projets) Quiz N1 (11-12/06/2026 - Activité non validée)",
+        "UE 6.1.3 Sécurité systèmes info Quiz N2 (25-26/06/2026 - Activité non validée)",
+        "UE 6.3.2 Progressive Web Applications Quiz N2 (25-26/06/2026 - Activité non validée)",
+        "UE 6.4.4 FTLV (projets) Quiz N2 (25-26/06/2026 - Activité non validée)"
       ]
     }
   }
