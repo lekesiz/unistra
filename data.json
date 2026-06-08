@@ -2,8 +2,8 @@
   "formation": "LP DWCA 2025/2026",
   "universite": "Université de Strasbourg - Service Formation Continue",
   "plateforme": "https://digitaluni.sfc.unistra.fr/",
-  "derniere_verification": "2026-06-01",
-  "note_verification": "Vérification LIVE réussie le 01/06/2026 07:15-07:20 (login OK). Toutes les UE progression pédagogique vérifiées. Fiche de suivi Eval Formative complète extraite. S2 quiz désormais publiés et majoritairement validés. 49/58 quiz validés au total (S1: 28/32, S2: 21/26). 5 quiz S2 non validés (11-12/06 et 25-26/06). Durée attestée: 81H / 96H30 contractuelle.",
+  "derniere_verification": "2026-06-08",
+  "note_verification": "Tentative de vérification le 08/06/2026 (session expirée, login requis - identifiants non disponibles). Données inchangées depuis le 01/06/2026. RAPPEL URGENT: 2 quiz à passer le 11-12/06/2026 (UE 6.2.2 Dév 3D N2, UE 6.4.4 FTLV N1). 3 quiz restants le 25-26/06/2026. Suivi N°7 prévu le 04-05/06 (à vérifier si déposé). 49/58 quiz validés au total (S1: 28/32, S2: 21/26). Durée attestée: 81H / 96H30 contractuelle.",
   "etudiant": "Mikail L.",
   "semestres": [
     {
@@ -107,8 +107,9 @@
           "travaux_a_rendre": [
             {
               "titre": "Suivi N°7",
-              "statut": "a_venir",
-              "deadline": "05/06/2026"
+              "statut": "a_verifier",
+              "deadline": "05/06/2026",
+              "note": "Deadline passée (05/06) - à vérifier si déposé"
             },
             {
               "titre": "Suivi N°8",
