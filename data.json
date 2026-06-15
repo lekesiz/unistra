@@ -2,8 +2,8 @@
   "formation": "LP DWCA 2025/2026",
   "universite": "Université de Strasbourg - Service Formation Continue",
   "plateforme": "https://digitaluni.sfc.unistra.fr/",
-  "derniere_verification": "2026-06-08",
-  "note_verification": "VÉRIFIÉ LIVE le 08/06/2026 (login réussi). CHANGEMENT MAJEUR: UE 6.2 Blender Séance 6 dépôt devoir VALIDÉ (fichier EU6.2.zip déposé le 24/04/2026 - anciennement marqué comme non déposé). Toutes les séances Blender (1-6) validées le 24/04/2026. RAPPEL URGENT: 2 quiz à passer le 11-12/06/2026 (UE 6.2.2 Dév 3D N2, UE 6.4.4 FTLV N1). 3 quiz restants le 25-26/06/2026. 49/58 quiz validés au total (S1: 28/32, S2: 21/26). Durée attestée: 81H / 96H30 contractuelle.",
+  "derniere_verification": "2026-06-15",
+  "note_verification": "Tentative le 15/06/2026 (session expirée, login requis - mot de passe non disponible). MISE À JOUR TEMPORELLE: La fenêtre quiz 11-12/06/2026 est désormais PASSÉE (UE 6.2.2 Dév 3D N2, UE 6.4.4 FTLV N1 - statut à confirmer lors du prochain login). Suivi N°7 deadline passée (04-05/06). Suivi N°8 fenêtre 18-19/06 imminente. 3 quiz restants le 25-26/06/2026 (Sécurité N2, PWA N2, FTLV N2). Prochaine action: se reconnecter pour vérifier si les 2 quiz du 11-12/06 ont été passés.",
   "etudiant": "Mikail L.",
   "semestres": [
     {
@@ -103,18 +103,19 @@
           "statut": "en_cours",
           "progression": 67,
           "url": "https://digitaluni.sfc.unistra.fr/progressionpedago/cours/idSemI/14086/seqId/7185/#/cours",
-          "note": "VÉRIFIÉ LIVE 08/06: 'Il n'y a aucune activité pour l'instant'. Séquence: 6.5 Projet Tuteuré Étape 2 Conception. Suivi géré par mail/Drive. Projet: AI Web Content Analyzer. Prochains: N°7 (04-05/06 - deadline passée), N°8 (18-19/06), N°9 soutenance (02-03/07).",
+          "note": "Mise à jour 15/06 (login requis pour vérification). Séquence: 6.5 Projet Tuteuré Étape 2 Conception. Suivi géré par mail/Drive. Projet: AI Web Content Analyzer. N°7 deadline passée (04-05/06, statut inconnu). N°8 IMMINENT (18-19/06). N°9 soutenance (02-03/07).",
           "travaux_a_rendre": [
             {
               "titre": "Suivi N°7",
               "statut": "a_verifier",
               "deadline": "05/06/2026",
-              "note": "Deadline passée (05/06) - à vérifier si déposé"
+              "note": "Deadline passée (05/06) - statut inconnu (login requis)"
             },
             {
               "titre": "Suivi N°8",
-              "statut": "a_venir",
-              "deadline": "19/06/2026"
+              "statut": "imminent",
+              "deadline": "19/06/2026",
+              "note": "Fenêtre 18-19/06 - IMMINENT"
             },
             {
               "titre": "Suivi N°9 (Soutenance/Bilan)",
@@ -160,7 +161,7 @@
       "total_quiz": 26,
       "valides": 21,
       "non_valides": 5,
-      "note": "VÉRIFIÉ LIVE 08/06. Quiz S2: 21/26 validés. 5 non validés restants (2 le 11-12/06, 3 le 25-26/06). Durée attestée totale: 81H sur 96H30 contractuelle. Aucun changement depuis 01/06.",
+      "note": "Mise à jour 15/06. Quiz S2: 21/26 validés (inchangé - login requis pour confirmer). Fenêtre 11-12/06 PASSÉE (2 quiz: Dév 3D N2, FTLV N1 - statut à confirmer). 3 quiz restants fenêtre 25-26/06 (Sécurité N2, PWA N2, FTLV N2). Durée attestée totale: 81H sur 96H30 contractuelle.",
       "quiz_valides": [
         "UE 6.1.1 PHP N1 (05/03/2026) et N2 (20/03/2026)",
         "UE 6.1.2 CMS N1 (20/03/2026) et N2 (02/04/2026)",
@@ -177,8 +178,8 @@
         "UE 5.3.5 Réseaux sociaux N2 (05/03/2026)"
       ],
       "quiz_non_valides": [
-        "UE 6.2.2 Développement 3D Quiz N2 (11-12/06/2026 - Activité non validée)",
-        "UE 6.4.4 FTLV (projets) Quiz N1 (11-12/06/2026 - Activité non validée)",
+        "UE 6.2.2 Développement 3D Quiz N2 (11-12/06/2026 - FENÊTRE PASSÉE, statut à vérifier)",
+        "UE 6.4.4 FTLV (projets) Quiz N1 (11-12/06/2026 - FENÊTRE PASSÉE, statut à vérifier)",
         "UE 6.1.3 Sécurité systèmes info Quiz N2 (25-26/06/2026 - Activité non validée)",
         "UE 6.3.2 Progressive Web Applications Quiz N2 (25-26/06/2026 - Activité non validée)",
         "UE 6.4.4 FTLV (projets) Quiz N2 (25-26/06/2026 - Activité non validée)"
